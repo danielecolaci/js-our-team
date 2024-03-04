@@ -50,8 +50,8 @@ for (let i = 0; i < team.length; i++) {
 //Stampare le stesse informazioni su DOM sottoforma di stringhe.
 function memberString(teamMember) {
     return `
-        <div>
-            <p>${teamMember.image}</p>
+        <div class="text-center">
+            <img src="./assets/img/${teamMember.image}" alt="">
             <h4>${teamMember.name}</h4>
             <h6>${teamMember.role}</h6>
             <hr>
