@@ -1,3 +1,7 @@
+//Prendo il div .container
+const container = document.querySelector('.container');
+/* console.log(container); */
+
 const team = [
     {
         name: 'Wayne Barnett',
@@ -40,4 +44,23 @@ for (let i = 0; i < team.length; i++) {
     console.log('Role: ' + teamMember.role);
     console.log('Photo: ' + teamMember.image);
     console.log(' ');
+}
+
+
+//Stampare le stesse informazioni su DOM sottoforma di stringhe.
+function memberString(teamMember) {
+    return `
+        <div>
+            <p>${teamMember.image}</p>
+            <h4>${teamMember.name}</h4>
+            <h6>${teamMember.role}</h6>
+            <hr>
+        </div>
+    `;
+}
+
+for (let i = 0; i < team.length; i++) {
+    const teamMember = team[i];
+    const memberText = memberString(teamMember);
+    container.innerHTML += memberText;
 }
