@@ -32,3 +32,12 @@ const team = [
 ];
 
 console.log(team);
+
+//Stampare su console le informazioni di nome, ruolo e la stringa della foto.
+for (let i = 0; i < team.length; i++) {
+    const teamMember = team[i];
+    console.log('Name: ' + teamMember.name);
+    console.log('Role: ' + teamMember.role);
+    console.log('Photo: ' + teamMember.image);
+    console.log(' ');
+}
