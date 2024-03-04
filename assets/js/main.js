@@ -1,5 +1,5 @@
 //Prendo il div .container
-const container = document.querySelector('.container');
+const container = document.querySelector('#container');
 /* console.log(container); */
 
 const team = [
@@ -48,13 +48,14 @@ for (let i = 0; i < team.length; i++) {
 
 
 //Stampare le stesse informazioni su DOM sottoforma di stringhe.
+//Trasformare la stringa foto in una immagine effettiva.
+//Organizzare i singoli membri in card/schede.
 function memberString(teamMember) {
     return `
-        <div class="text-center">
+        <div class="card text-center border-0">
             <img src="./assets/img/${teamMember.image}" alt="">
             <h4>${teamMember.name}</h4>
             <h6>${teamMember.role}</h6>
-            <hr>
         </div>
     `;
 }
